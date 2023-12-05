@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/194756e679.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title> Kess AI Cookbook</title>
+  </head>
+  <body>
+    
+      <header>
+        <h1>Kess AI Cookbook </h1>
+      </header>
+      <main>
+        <div class="form-container">
+        <form id="food">
+          <input
+            type="text"
+            placeholder="Enter food to see an easy recipe "
+            autofocus
+            required
+            autocomplete="off"
+            class="information"
+            id="user-information"
+          />
+          <input type="submit" class="submit-button" />
+          <div class="clue">ie. Sushi, Chicken Cajun or Jollof Rice</div>
+        </form>
+        </div>
+        
+        <div class="food hidden blink" id="food"></div>
+      </main>
+      <footer>
+        <strong>This AI project was coded by</strong>
+        <a
+          href="https://main--jessica-abiri-portfolio.netlify.app/"
+          target="_blank"
+          >Jessica Abiri 👩🏽‍💻
+        </a>
+        and is
+        <a
+          href=""
+          target="_blank"
+          >open-sourced on GitHub <i class="fa-brands fa-github"></i></a
+        >
+        and is
+        <a href=""
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
+   
+    <script src="src/app.js"></script>
+  </body>
+</html>
