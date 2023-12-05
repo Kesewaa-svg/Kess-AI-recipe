@@ -16,12 +16,12 @@ function generateFood(event) {
   let prompt = `User informations:Generate a short and simple food recipe  about ${informationInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  let poemDisplay = document.querySelector("#food");
-  poemDisplay.classList.remove("hidden");
-  poemDisplay.innerHTML = `<div class="generating"> ⏳ Generating an easy food recipe about ${informationInput.value} 🙂 </div>`;
+  let recipeDisplay = document.querySelector("#food");
+  recipeDisplay.classList.remove("hidden");
+  recipeDisplay.innerHTML = `<div class="generating"> ⏳ Generating an easy food recipe about ${informationInput.value} 🙂 </div>`;
 
   axios.get(apiUrl).then(showRecipe);
 }
 
-let poemElement = document.querySelector("#food-generator");
-poemElement.addEventListener("submit", generateFood);
+let recipeElement = document.querySelector("#food-generator");
+recipeElement.addEventListener("submit", generateFood);
