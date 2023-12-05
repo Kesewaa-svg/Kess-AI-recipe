@@ -1,64 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/194756e679.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <title> Kess AI Cookbook</title>
-  </head>
-  <body>
-    
-      <header>
-        <h1>Kess AI Cookbook </h1>
-      </header>
-      <main>
-        <div class="form-container">
-        <form id="poem-generator">
-          <input
-            type="text"
-            placeholder="Enter food to see an easy recipe "
-            autofocus
-            required
-            autocomplete="off"
-            class="information"
-            id="user-information"
-          />
-          <input type="submit" class="submit-button" />
-          <div class="clue">ie. Joy, Beach or Amsterdam</div>
-        </form>
-        </div>
-        
-        <div class="poem hidden blink" id="poem"></div>
-      </main>
-      <footer>
-        <strong>This AI project was coded by</strong>
-        <a
-          href="https://main--jessica-abiri-portfolio.netlify.app/"
-          target="_blank"
-          >Jessica Abiri 👩🏽‍💻
-        </a>
-        and is
-        <a
-          href="https://github.com/Kesewaa-svg/dutch-poem-repository"
-          target="_blank"
-          >open-sourced on GitHub <i class="fa-brands fa-github"></i></a
-        >
-        and is
-        <a href="https://dutch-ai-poem-generator.netlify.app/"
-          >hosted on Netlify</a
-        >
-      </footer>
-    </div>
-   
-    <script src="src/app.js"></script>
-  </body>
-</html>
+:root {
+  --primary-color: #91b776;
+}
+
+body {
+  background: linear-gradient(
+    99.6deg,
+    rgb(112, 128, 152) 10.6%,
+    rgb(242, 227, 234) 32.9%,
+    rgb(234, 202, 213) 52.7%,
+    rgb(220, 227, 239) 72.8%,
+    rgb(185, 205, 227) 81.1%,
+    rgb(154, 180, 212) 102.4%
+  );
+  font-family: "Roboto Flex", sans-serif;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.form-container {
+  padding: 20px 40px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  border-radius: 10px;
+  margin: 0 30px;
+}
+form {
+  text-align: center;
+}
+
+.clue {
+  line-height: 1.5;
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+footer {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+.container {
+  color: var(--primary-color);
+  max-width: 600px;
+
+  border-radius: 20px;
+}
+
+.food-generator {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.information {
+  padding: 16px;
+  border: 1px solid rgba(39, 33, 66, 0.5);
+  width: 40%;
+  font-size: 16px;
+  border-radius: 50px;
+  line-height: 20px;
+  color: #272044;
+}
+
+.submit-button {
+  border-radius: 30px;
+  padding: 0 20px;
+  margin: 0 auto;
+  color: white;
+  border: none;
+  width: 100px;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 12px 22px;
+  background-color: var(--primary-color);
+}
+
+.food {
+  font-family: "Ephesis", cursive;
+  font-size: 24px;
+  color: black;
+  padding: 20px;
+  line-height: 1.5;
+  border: 2px solid #cfc89a;
+  border-radius: 30px;
+  box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
